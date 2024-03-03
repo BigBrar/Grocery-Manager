@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Organiser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="load_groceries()">
+    <p class="main-heading">Grocery Shopping List</p>
+
+    <div class="groceries-div">
+        <div class="grocery-heading-tooltip" style="display: grid; grid-template-columns: 1fr 6fr; width: 100%;">
+            <p style="margin-left: 20px; padding-right: 50px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 17px;">Date</p>
+            <p style="margin-left: 90px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 17px;">Name</p>
+        </div>
+    </div>
+
+
+    <div class="tooltip-div">
+        <button class="tooltip-button" onclick="toggle_field()">
+            <img class="tooltip-icon" src="images/add-icon.png" alt="">
+        </button> 
+    </div>
+
+    <div class="tooltip-field">
+        <div class="tooltip-heading-div">
+            <p class="tooltip-heading">Add Grocery</p>
+            <div class="tooltip-close-button">
+                <button style="background-color: transparent; border: none; cursor: pointer;" onclick="toggle_field()"><img style="width: 30px;" src="/images/delete-icon2.png" alt=""></button>
+            </div>  
+        </div>
+        <input type="text" id="name-grocery" placeholder="Grocery Name"><br>
+        <input type="date" id="date-grocery"  placeholder="Date"><br>
+        <button class="grocery-submit" onclick="add_groceries()">Submit</button>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

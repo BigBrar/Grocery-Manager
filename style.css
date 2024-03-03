@@ -1,0 +1,275 @@
+body{
+    /* background-color: rgb(154, 209, 114); */
+    /* background-image: linear-gradient(rgb(154,209,114),lightgreen); */
+    background-color: rgb(161, 217, 161);
+    position: relative;
+}
+
+.main-heading{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+.groceries-div{
+    position: relative;
+    margin-left: 150px;
+    margin-right: 150px;
+    display: grid;
+    grid-template-columns: 3fr 150px;  
+    background-color:white;
+    border-radius: 15px;
+    justify-content: left;
+    /* align-items: center; */
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.grocery-heading-tooltip{
+    position: absolute;
+    display: flex;
+    margin-left: 10px;
+}
+
+
+
+.grocery-item{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    border-radius: 4px;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(224, 226, 225);
+    /* justify-content: center; */
+}
+
+.grocery-date{
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+.grocery-name{
+    margin-left: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+.modify-grocery{
+    /* background-color: gray; */
+    /* margin-left: 35px; */
+    /* margin-top: 50px; */
+    /* margin-right: 85px; */
+    /* background-color: white; */
+    border-radius: 4px;
+    /* position: absolute; */
+    height: 50px;
+    /* right: 155px; */
+    /* height:50px; */
+    border: 3px;
+    /* width: 100%; */  
+    display: flex;
+    /* grid-template-columns: 1fr 1fr ; */
+    align-items: end;
+    margin-top: 40px;
+    justify-content: center;
+    gap: 10px;
+    float: right;
+    /* background-color: rgb(224, 226, 225); */
+    /* background-color: red; */
+}
+
+.edit-button{
+    width: 40px;
+    background-color: transparent;
+    /* margin-left: 25px; */
+    /* background-color: white; */
+    border-color: white;
+    border-radius: 6px; 
+    transition: background-color 0.225s, opacity 0.225s;
+    border-style: solid;
+    /* border-color: rgb(65, 63, 63); */
+}
+
+.edit-button:hover{
+    background-color: rgb(224, 226, 225);
+    /* opacity: 0.9; */
+}
+
+.edit-button:active{
+    background-color: rgb(161, 217, 161);
+}
+
+.delete-button{
+    width: 40px;
+    background-color: transparent;
+    border-radius: 6px;
+    border-color: transparent;
+    transition: background-color 0.225s;
+    /* margin-left: 25px; */
+    /* background-color: white; */
+    /* border-radius: 6px; */
+    /* border-color: rgb(65,63,63); */
+    /* border-style: solid; */
+}
+
+.delete-button:hover{
+    background-color: rgb(221, 131, 131);
+}
+
+.delete-button:active{
+    background-color: rgb(245, 69, 69);
+}
+
+.edit-icon{
+    width: 25px;
+    transition: width 0.12s;
+    /* margin-left: 25px; */
+}
+
+.edit-icon:hover{
+    width:27px;
+}
+
+.edit-icon:active{
+    width: 22px;
+}
+
+.delete-icon{
+    width: 25px;
+    margin-top: 2px;
+    transition: width 0.11s;
+    /* margin-left: 15px; */
+}
+
+.delete-icon:hover{
+    width: 28px;
+}
+
+.delete-icon:active{
+    width: 22px;
+}
+
+.tooltip-div{
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+}
+
+.tooltip-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: width 0.15s, background-color 0.15s;
+}
+
+.tooltip-icon{
+    width: 47px;
+    transition: width 0.2s, background-color 0.15s;
+    border-radius: 5px;
+}
+
+.tooltip-icon:active{
+    width: 40px;
+    background-color: rgb(159, 230, 159);
+}
+
+.tooltip-field{
+    position: absolute;
+    overflow: hidden;
+    border-radius: 8px;
+    align-items: center;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    /* width: 300px; */
+    background-color: lightgray;
+    transition: height 0.25s, width 0.25s, transform 0.25s;
+    top: 29%;
+  right: 27%;
+  /* flex: 2; */
+  height: 0%;
+  width: 50%;
+}
+
+
+#name-grocery{
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* #date-grocery{
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+/* .grocery-submit{
+    height: 30px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    border-style: dashed;
+    transition: background-color 0.125s;
+} */
+
+.grocery-submit:hover{
+    background-color: rgb(155, 212, 155);
+}
+
+
+.tooltip-heading-div{
+    /* display: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top: 0px; */
+}
+
+.tooltip-close-button{
+    position: absolute;
+    right: 10px;
+}
+
+
+@media (max-width: 640px) { 
+    .groceries-div{
+        margin: 5px;
+    }
+    
+    .grocery-date{
+        font-size: 14px;
+    }
+
+    .grocery-name{
+        font-size: 15px;
+    }
+
+    .edit-icon{
+        width: 23px;
+    }
+
+    .delete-icon{
+        width: 23px;
+    }
+
+    .tooltip-field{
+        width: 250px;
+        /* margin-left: 30px; */
+        right: 20%;
+    }
+ }
